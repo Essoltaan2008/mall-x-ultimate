@@ -1,0 +1,98 @@
+name: mallx
+description: MallX — كل اللي محتاجه في مول واحد
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+  flutter: '>=3.19.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # ── State Management ──────────────────────────────────────────────────
+  provider: ^6.1.2
+
+  # ── Networking ────────────────────────────────────────────────────────
+  dio: ^5.4.3
+  http: ^1.2.1                    # SSE streaming (AI chat)
+
+  # ── Real-time ─────────────────────────────────────────────────────────
+  signalr_netcore: ^1.3.7         # SignalR WebSocket client
+
+  # ── Secure Storage ────────────────────────────────────────────────────
+  flutter_secure_storage: ^9.0.0
+  shared_preferences: ^2.2.3
+
+  # ── Location & GPS ────────────────────────────────────────────────────
+  geolocator: ^11.1.0             # Driver GPS tracking
+
+  # ── Push Notifications ────────────────────────────────────────────────
+  firebase_core: ^2.31.0
+  firebase_messaging: ^14.9.4
+  flutter_local_notifications: ^17.1.2
+
+  # ── UI & Animations ───────────────────────────────────────────────────
+  cached_network_image: ^3.3.1
+  flutter_svg: ^2.0.10+1
+  shimmer: ^3.0.0
+  lottie: ^3.1.0
+
+  # ── Charts ───────────────────────────────────────────────────────────
+  fl_chart: ^0.68.0
+
+  # ── Maps & QR ─────────────────────────────────────────────────────────
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^5.1.1          # QR code scanning
+  url_launcher: ^6.3.0
+
+  # ── Media ─────────────────────────────────────────────────────────────
+  image_picker: ^1.1.1
+  path_provider: ^2.1.3
+
+  # ── Utilities ─────────────────────────────────────────────────────────
+  intl: ^0.19.0
+  uuid: ^4.4.0
+  timeago: ^3.6.1                 # "منذ 5 دقائق"
+  share_plus: ^9.0.0              # Share referral code
+  connectivity_plus: ^6.0.3      # Network status
+  package_info_plus: ^8.0.0      # App version
+
+  # ── Icons ─────────────────────────────────────────────────────────────
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  mockito: ^5.4.4
+  build_runner: ^2.4.12
+
+flutter:
+  uses-material-design: true
+
+  generate: true                  # For l10n
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/lottie/
+
+  fonts:
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Cairo-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Cairo-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Cairo-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Cairo-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Cairo-Black.ttf
+          weight: 900
